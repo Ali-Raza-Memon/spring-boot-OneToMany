@@ -14,6 +14,12 @@ public class OrderResponse {
 
     private String name;
     private String productName;
-//    private int price;
+
+    public OrderResponse(String name, String productName) {
+        this.name = name;
+        this.productName = productName;
+    }
+
+    private int price;
 
 }
