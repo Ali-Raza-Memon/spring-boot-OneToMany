@@ -1,6 +1,7 @@
 package com.javatechjpa.controller;
 
 import com.javatechjpa.dto.OrderRequest;
+import com.javatechjpa.dto.OrderResponse;
 import com.javatechjpa.entity.Customer;
 import com.javatechjpa.repository.CustomerRepository;
 import com.javatechjpa.repository.ProductRepository;
@@ -31,6 +32,10 @@ public class OrderController {
         return customerRepository.findAll();
     }
 
+    @GetMapping("/getInfo")
+    public List<OrderResponse> getJoinInformation(){
+        return customerRepository.getJointInformation();
+    }
 
 
 }
